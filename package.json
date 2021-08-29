@@ -1,0 +1,24 @@
+{
+  "name": "hello-world-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "compile-descriptor protos/hello_action.proto",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janory/hello-world-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janory/hello-world-action/issues"
+  },
+  "homepage": "https://github.com/janory/hello-world-action#readme",
+  "dependencies": {
+    "@lightbend/akkaserverless-javascript-sdk": "^0.33.0"
+  }
+}

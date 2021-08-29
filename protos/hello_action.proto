@@ -1,0 +1,20 @@
+// This is the public API offered by your entity.
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+import "akkaserverless/annotations.proto";
+
+package js.hello.world;
+
+message Response {
+    string message = 1;
+}
+
+service HelloService {
+    rpc HelloAction(google.protobuf.Empty) returns (Response) {
+        option (google.api.http) = {
+            get: "/hello"
+        };
+    }
+}

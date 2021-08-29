@@ -1,0 +1,8 @@
+.idea/
+node_modules/
+.next/
+user-function.desc
+dist
+types
+generated
+*.iml
