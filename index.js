@@ -5,14 +5,13 @@ const helloAction = new Action(
     "js.hello.world.HelloService",
     {
         includeDirs: ["protos"],
-        forwardHeaders: ["Authorization"],
     }
 )
 
 const Response = helloAction.lookupType("js.hello.world.Response");
 
 helloAction.setCommandHandlers({
-    HelloAction: (request, context) => context.write(Response.create({ message: "Hello Lightbend2" }))
+    HelloAction: (request, context) => context.write(Response.create({ message: "Hello World!" }))
 })
 
 new AkkaServerless().addComponent(helloAction).start();
